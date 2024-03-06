@@ -1,0 +1,26 @@
+#Navbar
+{
+ height:64px;
+ width:100%;
+ background-color: var(--navbar);   
+ position: fixed;
+ left:0;
+ top:0;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+#NavbarTitle
+{
+    color:var(--navbarTitle);
+    font-size: x-large;
+    transition: all .25s;
+    user-select: none;
+    text-decoration: none;
+}
+
+#NavbarTitle:hover
+{
+    transform: scale(105%);
+}

@@ -1,0 +1,25 @@
+/*put this in every html file*/
+
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* font-family: "Noto Sans", sans-serif;*/
+
+html,body
+{
+    height:100%;
+    width:100%;
+    overflow-x: hidden;
+    font-family: "Noto Sans", sans-serif;;
+}
+
+
+/*easy to create new themes: just set any element that can be themed as data-theme="themeName"*/
+:root, [data-theme="dark"] { /*default*/
+    --navbar: #000000;
+    --navbarTitle:white;
+}
+
+[data-theme="light"] 
+{
+    --navbar: #ffffff;
+    --navbarTitle:black;
+}
