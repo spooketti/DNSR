@@ -16,10 +16,10 @@ html,body
 :root, [data-theme="dark"] { /*default*/
     --navbar: #000000;
     --navbarTitle:white;
+    --loginBody:#292929;
 }
 
 [data-theme="light"] 
 {
-    --navbar: #ffffff;
-    --navbarTitle:black;
+    --navbar:white; /*too lazy to do this */
 }
