@@ -1,0 +1,5 @@
+all code files (html, js css) are lowercase
+put js in src folder
+put styles in style folder
+
+add any conventions u want the team to follow here
