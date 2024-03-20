@@ -2,14 +2,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* font-family: "Noto Sans", sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
+
 
 html,body
 {
     height:100%;
     width:100%;
     overflow-x: hidden;
-    font-family: "Noto Sans", sans-serif;;
+    font-family: "Raleway", sans-serif;
+    margin:0;
 }
+
+ body
+ {
+    padding-top: 64px;
+ }
 
 
 /*easy to create new themes: just set any element that can be themed as data-theme="themeName"*/

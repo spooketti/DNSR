@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Del Norte Student Response</title>
+    <title>Physiognomy</title>
     <link rel="stylesheet" href="style/init.css">
     <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/main.css">
   </head>
   <body>
     <nav id="Navbar" data-theme="dark">
-      <a id="NavbarTitle" data-theme="dark" href="index.html">DNSR</a>
+      <a id="NavbarTitle" data-theme="dark" href="index.html">Geron</a>
     </nav>
+    <div id="Graph"></div>
+    <div id="Main">
+      <h1 id="CameraHeader">Camera Information</h1>
+      <canvas id="PhotoPreview" height="480" width="640"></canvas>
+      <div id="CamActivator" onclick="WebCamAct()">
+        <span id="CameraActText">I am going to kill myself</span>
+      </div>
+      <video id="vid" autoplay playsinline webkit-playsinline muted hidden></video>
+    </div>
+    <div id="Information"></div>
     
 	<script src="src/script.js"></script>
   </body>

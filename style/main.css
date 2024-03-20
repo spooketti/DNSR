@@ -1,0 +1,85 @@
+#Graph {
+  background-color: red;
+  width: 300px;
+  left: 0;
+  position: fixed;
+  top: 64px;
+  height: 100%;
+}
+
+#Main {
+  background-color: rgb(0, 255, 26);
+  width: calc(100% - 600px);
+  height: 100%;
+  left: 300px;
+  position: fixed;
+}
+
+#PhotoPreview {
+  position: absolute;
+  left: calc(50% - 320px);
+}
+
+#CameraHeader {
+  text-align: center;
+  font-family: "Libre Barcode 128 Text", system-ui;
+}
+
+#CamActivator {
+  position: absolute;
+  left: calc(50% - 320px);
+  width: 640px;
+  height: 480px;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+}
+
+#CameraActText
+{
+  pointer-events:none;
+}
+
+#Information {
+  background-color: blue;
+  width: 300px;
+  position: fixed;
+  height: 100%;
+  right: 0;
+  top: 64px;
+
+}
+
+@media only screen and (max-width: 1240px) {
+  #Information {
+    display: none;
+  }
+
+  #Main {
+    left: 300px;
+    top: 64px;
+    width: calc(100% - 300px);
+
+  }
+
+}
+
+@media only screen and (max-width: 940px) {
+  #Graph {
+    display: none;
+  }
+
+  #Main {
+    left: 0px;
+    top: 64px;
+    width: 100%;
+  }
+
+  #PhotoPreview {
+    left: calc(50% - 320px);
+  }
+
+
+}
