@@ -5,6 +5,8 @@ let cameraHeader= document.getElementById("CameraHeader")
 let mediaDevices = navigator.mediaDevices;
 let camActDiv = document.getElementById("CamActivator");
 let camActText = document.getElementById("CameraActText")
+let main = document.getElementById("Main")
+let sendButton = document.getElementById("sendButton")
 let canvasInterval
 let camActive = false;
 vid.muted = true;
@@ -15,9 +17,19 @@ function WebCamAct(){
     {
         window.clearInterval(canvasInterval)
         globalStream.getTracks()[0].stop()
+        camActive = false
+        sendButton.classList.remove("locked")
         return
     }
     camActive = true
+   videoElement.remove()
+   videoElement = document.createElement("video")
+   videoElement.id = "vid"
+   videoElement.muted = true
+   videoElement.autoplay = true
+   videoElement.style.pointerEvents = "none"
+   main.appendChild(videoElement)
+   videoElement = document.getElementById("vid")
 
     camActText.innerText = "Connecting, please allow acces to your camera"
         mediaDevices
@@ -27,6 +39,7 @@ function WebCamAct(){
             })
             .then((stream) => {
                 videoElement.srcObject = stream
+                camActDiv.style.background = "unset"
                 globalStream = stream
                 videoElement.addEventListener("loadedmetadata", () => {
                     videoElement.play();

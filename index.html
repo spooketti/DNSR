@@ -11,19 +11,29 @@
   </head>
   <body>
     <nav id="Navbar" data-theme="dark">
-      <a id="NavbarTitle" data-theme="dark" href="index.html">Geron</a>
+      <a id="NavbarTitle" data-theme="dark" href="index.html">Physiognomy</a>
     </nav>
     <div id="Graph"></div>
     <div id="Main">
+      <div id="MainBG"></div>
+      <div id="MainContent">
       <h1 id="CameraHeader">Camera Information</h1>
       <canvas id="PhotoPreview" height="480" width="640"></canvas>
       <div id="CamActivator" onclick="WebCamAct()">
-        <span id="CameraActText">I am going to kill myself</span>
+        <span id="CameraActText">Welcome to Physiognomy! <br>To use your camera first click to start the camera, and then click again to take the photo!</span>
       </div>
       <video id="vid" autoplay playsinline webkit-playsinline muted hidden></video>
+      <input type="file" style="display:none" id="faceUpload" accept="image/png, image/jpg, image/jpeg">
+      <img id="uploadPreview">
+      <button id="uploadButton" onclick="faceUpload.click()">Upload Your Face!</button>
+      <button id="sendButton" class="locked" onclick="">Guess My Age and Gender!</button>
     </div>
-    <div id="Information"></div>
+    </div>
+    <div id="Information">
+      <div id="InfoHead"><span style="color:#87df34">physio@gnomy</span><span>:</span><span style="color:#6d91ba">/Statistics</span><span>$</span></div>
+    </div>
     
-	<script src="src/script.js"></script>
+	<script src="src/video.js"></script>
+  <script src="src/post.js"></script>
   </body>
 </html>

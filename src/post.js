@@ -1,0 +1,51 @@
+let fileUpload = document.getElementById("faceUpload")
+let photoPreview = document.getElementById("uploadPreview")
+let endpoint = "http://192.168.1.106:6221/"
+fileUpload.addEventListener('change', function(event) {
+    pfpChanged = true
+    const file = event.target.files[0]; // Get the selected file
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const imageUrl = event.target.result; // Get the image URL
+            const image = new Image();
+            image.src = imageUrl;
+            image.onload = function() {
+                pfpChanged = true
+                ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+                sendButton.classList.remove("locked")
+            };
+        };
+        reader.readAsDataURL(file); // Read the file as a data URL
+    }
+  });
+
+
+function sendFace()
+{
+    if(sendButton.classList.contains("locked"))
+    {
+        return
+    }
+    let payload = {"image":canvas.toDataURL()}
+    fetch(endpoint,
+        {
+            method:"POST",
+            headers: {
+                "Content-Type": "application/json",
+              },
+            body: JSON.stringify(payload)
+        }).then(response =>{
+            if(response.ok)
+            {
+                chatbox.value = null;
+                return response.json()
+            }
+            throw new Error("Network response failed")
+        }).then(data => {
+            console.log("Response:", data);
+          })
+          .catch(error => {
+            console.error("There was a problem with the fetch", error);
+          });
+}
