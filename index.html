@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
   <link rel="stylesheet" href="style/navbar.css">
   <link rel="stylesheet" href="style/main.css">
 </head>
-
 <body>
   <nav id="Navbar" data-theme="dark">
     <a id="NavbarTitle" data-theme="dark" href="index.html">Physiognomy</a>
@@ -29,8 +27,7 @@
       <h1 id="CameraHeader">Camera Information</h1>
       <canvas id="PhotoPreview" height="480" width="640"></canvas>
       <div id="CamActivator" onclick="WebCamAct()">
-        <span id="CameraActText">Welcome to Physiognomy! <br>To use your camera first click to start the camera, and
-          then click again to take the photo!</span>
+        <span id="CameraActText">Welcome to Physiognomy! <br>To use your camera first click to start the camera, and then click again to take the photo!</span>
       </div>
       <video id="vid" autoplay playsinline webkit-playsinline muted hidden></video>
       <input type="file" style="display:none" id="faceUpload" accept="image/png, image/jpg, image/jpeg">
@@ -51,12 +48,12 @@
     <span>(48,53):</span><span id="s6"></span>
     <span>(60,100):</span><span id="s7"></span>
     <span>Gender Confidence:</span><span id="gconf"></span>
-
   </div>
 
+  <!-- Ensure the script is linked correctly -->
+  <script src="src/graph.js"></script>
+  <!-- Link other scripts if necessary -->
   <script src="src/video.js"></script>
   <script src="src/post.js"></script>
-  <script src="src/graph.js"></script>
 </body>
-
 </html>
