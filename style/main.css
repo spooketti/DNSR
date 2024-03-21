@@ -122,6 +122,48 @@
   filter:brightness(50%);
 }
 
+#GoodOrBad
+{
+  position:absolute;
+  bottom:0;
+  height:200px;
+  width:100%;
+  left:0;
+  background-color: black;
+  color:white;
+}
+
+.choiceButton
+{
+  width:100px;
+  height:75px;
+  font-size: 60px;
+  border:none;
+  font-family: "Libre Barcode 128 Text", system-ui;
+  transition: all .25s;
+}
+
+.choiceButton:hover
+{
+  filter:brightness(150%);
+}
+
+.choiceButton:active
+{
+  filter:brightness(175%);
+}
+
+
+#yes
+{
+  background-color: #45a049;
+}
+
+#no
+{
+  background-color: #a04545;
+}
+
 @media only screen and (max-width: 1240px) {
   #Information {
     display: none;

@@ -1,6 +1,6 @@
 let fileUpload = document.getElementById("faceUpload")
 let photoPreview = document.getElementById("uploadPreview")
-let endpoint = "http://10.96.0.119:6221/getPrediction/"
+let endpoint = "http://127.0.0.1:6221/getPrediction/"
 fileUpload.addEventListener('change', function(event) {
     pfpChanged = true
     const file = event.target.files[0]; // Get the selected file

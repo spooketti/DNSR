@@ -15,7 +15,14 @@
   <nav id="Navbar" data-theme="dark">
     <a id="NavbarTitle" data-theme="dark" href="index.html">Physiognomy</a>
   </nav>
-  <div id="Graph"></div>
+  <div id="Graph">
+    <canvas width="300" height="495" id="CanvasGraph"></canvas>
+    <div id="GoodOrBad">
+      <span>Was the prediction about age correct?</span>
+      <button class="choiceButton" id="yes">Yes</button>
+      <button class="choiceButton" id="no">No</button>
+    </div>
+  </div>
   <div id="Main">
     <div id="MainBG"></div>
     <div id="MainContent">
@@ -49,6 +56,7 @@
 
   <script src="src/video.js"></script>
   <script src="src/post.js"></script>
+  <script src="src/graph.js"></script>
 </body>
 
 </html>
